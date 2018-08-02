@@ -1,0 +1,142 @@
+/* task 1 */
+.thumbnail {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.tm-section-title-box:hover {
+    color: #eeeeee;
+    font-weight: bold;
+    background-color: #00afd9;
+}
+
+/* task 4 */
+.tm-sidebar, .tm-content-box {
+    -webkit-box-shadow: 0 0 15px #bdbbbd;
+    box-shadow: 0 0 15px #bdbbbd;
+}
+
+/* task 5 */
+section::before, #home::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 30px solid #00afd9;
+    border-right: 160px solid transparent;
+}
+
+/* task 6 */
+.carousel .tm-section-title {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+
+/* tasks 3,7,8 */
+@media not print {
+
+    p:not(.text-xs-center)::first-letter {
+        color: #76cdd7;
+        font-size: 30px;
+    }
+
+    h2 ~ p:first-of-type {
+        font-style: italic;
+    }
+
+    h2 ~ p {
+        line-height: 220%;
+        text-indent: 25px;
+    }
+}
+
+/* task 9 */
+.heading h2 {
+    text-align: center;
+    color: #76cdd7;
+}
+
+.heading a:link {
+    color: #373a3c;
+}
+.heading a:visited {
+    color: silver;
+}
+
+.heading a:hover {
+    color: #76cdd7;
+    text-decoration: underline double;
+}
+
+.text::after {
+    content: 'New';
+    font-size: 60%;
+    color: red;
+    vertical-align: super;
+    display: inline-block;
+}
+
+/* task 10 */
+.blocks li p::first-letter {
+    color: #373a3c;
+}
+
+.blocks li:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* task 11 */
+.tm-nav-item:not(:last-child) {
+    border-bottom: 1px dotted silver;
+}
+
+/* task 12 */
+input[type="text"], button[type="submit"] {
+    color: red;
+}
+
+button[type="submit"]:hover {
+    background-color: #00afd9;
+    color: #eeeeee;
+    border-color: transparent;
+}
+
+.mandatory-field::after {
+    content: '*';
+    color: red;
+    display: inline-block;
+}
+
+/* print version */
+@media print {
+
+    .tm-main-content > section:not(:first-of-type), div#about, .tm-sidebar, #home::before, section::before {
+        display: none;
+    }
+
+    .tm-main-content {
+        margin: 0;
+    }
+
+    .flex-2-col {
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    h2.tm-section-title {
+        color: #4922ff;
+    }
+
+    div.tm-banner {
+        height: 220px;
+        margin: 0 20px;
+        padding: 0;
+    }
+
+    div.pad {
+        padding: 0;
+    }
+
+}
+
