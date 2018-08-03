@@ -114,6 +114,7 @@ button[type="submit"]:hover {
         display: none;
     }
 
+
     .tm-main-content {
         margin: 0;
     }
@@ -130,12 +131,19 @@ button[type="submit"]:hover {
 
     div.tm-banner {
         height: 220px;
-        margin: 0 20px;
-        padding: 0;
+        padding-bottom: 0;
     }
 
     div.pad {
-        padding: 0;
+        padding: 20px 0;
+    }
+
+    .margin-b-10 {
+        margin-bottom: 0;
+    }
+
+    html>body {
+        background-color: white;
     }
 
 }
