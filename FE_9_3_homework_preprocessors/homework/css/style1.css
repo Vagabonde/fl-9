@@ -1,0 +1,126 @@
+body {
+  background-color: #dedede;
+  font-family: Avenir;
+  color: #50637f; }
+
+.logo {
+  width: 35%;
+  float: left; }
+  .logo img {
+    width: 308px; }
+
+nav {
+  float: right;
+  margin-top: 15%;
+  display: flex;
+  width: 65%;
+  border-top: 1px solid #6e8995;
+  border-bottom: 1px solid #6e8995; }
+  nav a {
+    display: inline-block;
+    width: 33.3%;
+    text-align: center;
+    padding: 2% 0;
+    color: #00bed7;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease-out; }
+    nav a:hover {
+      background-color: rgba(0, 190, 215, 0.8);
+      color: #fff; }
+
+.toolbar {
+  clear: both;
+  float: right;
+  width: 21.6666666667%;
+  margin-bottom: 1%; }
+  .toolbar input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5%;
+    border: 1px solid #00bed7;
+    background-color: transparent; }
+    .toolbar input::placeholder {
+      color: #00bed7; }
+    .toolbar input:focus {
+      box-shadow: 2px 2px 5px #00bed7; }
+
+.main-wrapper {
+  box-sizing: border-box;
+  width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 0 40px; }
+
+.post-list {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; }
+  .post-list article {
+    width: 49%;
+    box-sizing: border-box;
+    margin: 1%;
+    padding: 1%;
+    background-color: #efefef; }
+    .post-list article:nth-child(odd) {
+      margin-left: 0; }
+    .post-list article:nth-child(even) {
+      margin-right: 0; }
+    .post-list article .post-description {
+      font-size: smaller;
+      border-bottom: 1px solid #6e8995;
+      color: #009989;
+      padding: 1%; }
+    .post-list article h3 {
+      color: #0099a9;
+      text-transform: uppercase;
+      margin: 1% 0; }
+    .post-list article p {
+      margin: 0 0 1%; }
+    .post-list article img {
+      width: 413.6px; }
+
+.about h1 {
+  text-align: right;
+  color: #00bed7; }
+.about img {
+  width: 880px; }
+
+.contact-form h1, .contact-form h4 {
+  text-align: right;
+  color: #00bed7; }
+.contact-form div {
+  margin-bottom: 1%; }
+  .contact-form div .contact-form-field {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1%;
+    border: 1px solid #6e8995;
+    background-color: transparent; }
+    .contact-form div .contact-form-field:focus {
+      border: 1px solid #00bed7;
+      box-shadow: 2px 2px 5px #00bed7; }
+.contact-form .send-btn {
+  float: right;
+  clear: both;
+  padding: 1% 6%;
+  background-color: #00bed7;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease; }
+  .contact-form .send-btn:hover {
+    background-color: #00d5f1;
+    transform: translateY(3px);
+    cursor: pointer; }
+.contact-form textarea {
+  height: 100px; }
+
+footer {
+  clear: both; }
+  footer span {
+    font-size: smaller; }
+
+

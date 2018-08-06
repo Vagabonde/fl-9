@@ -1,0 +1,19 @@
+$contentBackground: #fff;
+$borderColor: #6e8995;
+$navColor: #00bed7;
+$fontColor: #50637f;
+$headerColor: #0099a9;
+$postDescColor: #009989;
+$articleBackground: #efefef;
+$font: Avenir;
+
+//variables with same values for both designs
+
+$contentWidth: 960px;
+$contentSidePadding: 40px;
+$availableContentWidth: $contentWidth - ($contentSidePadding * 2);
+$menuWidth: 65%;
+$logoWidth: 0.35;
+$articleWidth: 0.49;
+$articleSidePadding: 0.01;
+$border: 1px solid $borderColor;
