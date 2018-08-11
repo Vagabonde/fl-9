@@ -1,0 +1,303 @@
+body {
+    font-family: "Open Sans";
+    background-color: #A4A4A4;
+    margin: 0;
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-wrapper {
+    margin: 0 auto;
+}
+
+aside p:last-child, .img-description, .likes-icon, footer nav a {
+    font-size: 75%;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+h2 {
+    font-size: initial;
+}
+
+header, aside, main, footer {
+    padding: 4.5%;
+}
+
+.logo, footer > p {
+    float: left;
+}
+
+nav {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-btn, .banner p, footer h2 {
+    text-transform: capitalize;
+}
+
+header nav a, header p, header h1, .show-btn, input[type="submit"], .logo, .img-description, .likes-icon {
+    color: #FFF;
+}
+
+.show-btn, .likes-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+}
+
+footer, aside, .subscription-field {
+    background-color: #FFF;
+}
+
+.show-btn, input[type="email"], input[type="submit"] {
+    box-sizing: border-box;
+}
+
+nav a {
+    padding: 2%;
+    transition: all 0.3s ease-out;
+}
+
+input[type="email"] {
+    border: 1px solid #343638;
+    background-color: #F3F3F3;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: 1px solid #343638;
+    background-color: #343638;
+}
+
+/* header*/
+header {
+    background: url('../img/apples.jpg') 50% 50% no-repeat;
+    background-size: cover;
+}
+
+header nav {
+    width: 32%;
+}
+
+.banner {
+    clear: both;
+    width: 50%;
+    margin: 16% auto 10%;
+}
+
+.banner p, h1 {
+    text-align: center;
+}
+
+h1 span {
+    font-size: 160%;
+}
+
+h1, .logo {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.show-btn {
+    display: block;
+    width: 17%;
+    padding: 1% 2%;
+    margin: 0 auto 10%;
+    transition: all 0.2s ease-out;
+}
+
+/* aside */
+aside {
+    display: flex;
+    align-items: center;
+}
+
+aside p:first-child {
+    margin-right: 5%;
+}
+
+/* main*/
+main {
+    background-color: #F3F3F3;
+}
+
+.article-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-list > h2 {
+    text-align: center;
+    margin: 5% 0;
+}
+
+article {
+    display: flex;
+    align-items: center;
+}
+
+article img {
+    width: 100%;
+}
+
+.img-container {
+    flex-basis: 60%;
+    position: relative;
+}
+
+.img-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle at top, transparent 45%, #343638 145%);
+}
+
+.img-description {
+    position: absolute;
+    margin: 0;
+    bottom: 7%;
+    left: 2%;
+    z-index: 1;
+}
+
+.likes-icon {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    padding: 1%;
+    z-index: 2;
+}
+
+.article-description {
+    flex-basis: 40%;
+    padding: 1%;
+}
+
+.article-description p {
+    text-align: center;
+    font-size: 80%;
+}
+
+article:nth-child(even) .img-container {
+    margin: 0 0 2% 2%;
+}
+
+article:nth-child(odd) .img-container {
+    margin: 0 2% 2% 0;
+    order: 1;
+}
+
+.subscription-field, .subscription-field input {
+    padding: 2% 1%;
+}
+
+.subscription-field input[type="email"] {
+    width: 60%;
+    margin-left: 1%;
+}
+
+.subscription-field input[type="submit"] {
+    width: 10%;
+    margin-left: -0.5%;
+}
+
+/*footer*/
+.flex-container {
+    display: flex;
+    margin: 3% 0 7%;
+}
+
+.flex-container section {
+    flex-basis: 25%;
+}
+
+.flex-container section:not(:last-of-type) {
+    margin-right: 2%;
+}
+
+footer p {
+    font-size: 65%;
+    color: #9E9E9E;
+}
+
+footer input {
+    font-size: 55%;
+    padding: 4% 1%;
+}
+
+footer input[type="email"] {
+    width: 65%;
+}
+
+footer input[type="submit"] {
+    margin-left: -2.5%;
+    width: 35%;
+}
+
+.tweet-description {
+    color: #E8E8E8;
+}
+
+hr {
+    border: 1px solid #F0F0F0;
+}
+
+footer nav {
+    width: 23%;
+
+}
+
+footer nav a, footer h2 {
+    color: #343638
+}
+
+/* hover and focus effects*/
+input:focus, button:focus {
+    outline: none;
+}
+
+nav a:hover, .show-btn:hover, input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+nav a:hover {
+    border-bottom: 1px solid;
+}
+
+header nav a:hover {
+    font-size: 115%;
+}
+
+footer nav a:hover {
+    font-size: 90%;
+}
+
+.show-btn:hover {
+    transform: translateY(3px);
+    background-color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    box-shadow: 0 0 5px;
+}
+
+input[type="email"]:focus {
+    box-shadow: inset 0 0 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #B7C8D9;
+}
