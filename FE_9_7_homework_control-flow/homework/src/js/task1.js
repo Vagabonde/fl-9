@@ -23,9 +23,11 @@ function checkPassword(password) {
         case null:
             alert('Canceled');
             break;
+
         case 'SuperUser':
             checkCurrentHours();
             break;
+
         default:
             alert('Wrong password');
     }
