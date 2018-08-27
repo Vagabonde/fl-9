@@ -1,71 +1,102 @@
+/**
+ * @return {string}
+ */
 function findType(parameter) {
-    return typeof parameter;
+  return typeof parameter;
 }
 
 function forEach(array, func) {
-    for (let i = 0; i < array.length; i++) {
-        func(array[i]);
-    }
+  for (let i = 0; i < array.length; i++) {
+    func(array[i]);
+  }
 }
 
+/**
+ * @return {Array}
+ */
 function map(array, func) {
-    let transformedArray = [];
-    forEach(array, item => transformedArray.push(func(item)));
+  let transformedArray = [];
+  forEach(array, item => transformedArray.push(func(item)));
 
-    return transformedArray;
+  return transformedArray;
 }
 
+/**
+ * @return {Array}
+ */
 function filter(array, func) {
-    let filteredArray = [];
+  let filteredArray = [];
 
-    for (let i = 0; i < array.length; i++) {
-        if (func(array[i])) {
-            filteredArray.push(array[i]);
-        }
+  for (let i = 0; i < array.length; i++) {
+    if (func(array[i])) {
+      filteredArray.push(array[i]);
     }
-    return filteredArray;
+  }
+  return filteredArray;
 }
 
+/**
+ * @return {Array}
+ */
 function getAdultAppleLovers(data) {
-    let adultAppleLovers = filter(data, item => item.age > 18 && item.favoriteFruit === 'apple');
+  let adultAppleLovers = filter(data,
+      item => item.age > 18 && item.favoriteFruit === `apple`);
 
-    return map(adultAppleLovers, item => item.name);
+  return map(adultAppleLovers, item => item.name);
 }
 
+/**
+ * @return {Array}
+ */
 function keys(obj) {
-    let keys = [];
+  let keys = [];
 
-    for (let key in obj) {
-        if (!obj.hasOwnProperty(key)) {
-            continue;
-        }
-        keys.push(key);
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      keys.push(key);
     }
-    return keys;
+  }
+  return keys;
 }
 
+/**
+ * @return {Array}
+ */
 function values(obj) {
-    let values = [];
+  let values = [];
 
-    for (let key in obj) {
-        if (!obj.hasOwnProperty(key)) {
-            continue;
-        }
-        values.push(obj[key]);
+  for (let key in obj) {
+    if (!obj.hasOwnProperty(key)) {
+      continue;
     }
-    return values;
+    values.push(obj[key]);
+  }
+  return values;
 }
 
+/**
+ * @return {string}
+ */
 function showFormattedDate(date) {
-    const year = date.getFullYear();
+  const year = date.getFullYear();
+  const months = [
+    `Jan`,
+    `Feb`,
+    `Mar`,
+    `Apr`,
+    `May`,
+    `Jun`,
+    `Jul`,
+    `Aug`,
+    `Sep`,
+    `Oct`,
+    `Nov`,
+    `Dec`];
+  const monthIndex = date.getMonth();
+  const month = months[monthIndex];
+  const day = date.getDate();
 
-    const months = [`Jan`, `Feb`, `Mar`, `Apr`, `May`, `Jun`, `Jul`, `Aug`, `Sep`, `Oct`, `Nov`, `Dec`];
-    const monthIndex = date.getMonth();
-    const month = months[monthIndex];
-
-    const day = date.getDate();
-
-    return `It is ${day} of ${month}, ${year}`;
+  return `It is ${day} of ${month}, ${year}`;
 }
 
 
