@@ -66,10 +66,9 @@ function values(obj) {
   let values = [];
 
   for (let key in obj) {
-    if (!obj.hasOwnProperty(key)) {
-      continue;
+    if (obj.hasOwnProperty(key)) {
+      values.push(obj[key]);
     }
-    values.push(obj[key]);
   }
   return values;
 }
