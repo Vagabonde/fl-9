@@ -1,0 +1,107 @@
+body {
+    font-family: Avenir, sans-serif;
+}
+
+.field {
+    border: 2px solid #000;
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 1.6em;
+    margin: 0 0 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.notification {
+    color: #7f3d49;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.dragged {
+    opacity: 0.5;
+}
+
+.highlighted {
+    box-shadow: inset 0 0 3px #2e2c2e;
+}
+
+.highlighted > * {
+    visibility: hidden;
+}
+
+input {
+    flex-basis: 90%;
+}
+
+input:focus {
+    border: 1px solid #979197;
+    box-shadow: inset 0 0 2px #979197;
+    outline: none;
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn-add:hover:not([disabled]) i {
+    color: #3d3ea9;
+}
+
+.btn-checkbox:hover:not(.checked) i {
+    color: #288737;
+}
+
+.btn-delete:hover i {
+    color: #7f3d49;
+}
+
+.btn-add i {
+    display: block;
+    font-size: 3em;
+    margin: -4px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+}
+
+li p {
+    flex-basis: 90%;
+    margin: 5px 0;
+}
+
+.pets-icon {
+    display: block;
+    font-size: 3.3em;
+    margin: 0 auto;
+    width: 10%;
+}
