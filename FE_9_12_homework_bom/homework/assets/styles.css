@@ -1,0 +1,64 @@
+body {
+    font-family: Avenir, sans-serif;
+}
+
+.field {
+    border: 1px solid #000;
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 1.6em;
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.btn-add {
+    display: flex;
+    margin: 0 auto;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+}
+
+li a {
+    flex-basis: 70%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-checkbox {
+    background: url("../assets/img/todo-s.png") no-repeat;
+    background-size: cover;
+    border: none;
+    padding: 15px;
+
+}
+
+.checked {
+    background: url("../assets/img/done-s.png") no-repeat;
+    background-size: cover;
+}
+
+.btn-delete {
+    background: url("../assets/img/remove-s.jpg") no-repeat;
+    background-size: cover;
+    border: none;
+    padding: 15px;
+}
+
