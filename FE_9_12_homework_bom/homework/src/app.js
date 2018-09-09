@@ -10,7 +10,7 @@ function route() {
   if (action === `#add`) {
     clearDom();
     generateTemplate(`Add task`, storeTask);
-  } else if (/#modify/.test(action)) {
+  } else if (/#\/modify/.test(action)) {
     clearDom();
     generateTemplate(`Modify`, saveChanges);
     fillInput();
@@ -34,15 +34,20 @@ function generateTemplate(header, funcSave) {
   field.appendChild(input);
   input.setAttribute(`type`, `text`);
 
+  const btnCancel = document.createElement(`button`);
+  field.appendChild(btnCancel);
+  btnCancel.classList.add(`btn-cancel`);
+  btnCancel.textContent = `Cancel`;
+
   const btnSave = document.createElement(`button`);
   field.appendChild(btnSave);
   btnSave.classList.add(`btn-save`);
   btnSave.textContent = `Save changes`;
 
-  const btnCancel = document.createElement(`button`);
-  field.appendChild(btnCancel);
-  btnCancel.classList.add(`btn-cancel`);
-  btnCancel.textContent = `Cancel`;
+  const flexBox = document.createElement(`div`);
+  field.appendChild(flexBox);
+  flexBox.appendChild(btnCancel);
+  flexBox.appendChild(btnSave);
 
   btnSave.addEventListener(`click`, funcSave);
   btnCancel.addEventListener(`click`, goToHomePage);
@@ -91,10 +96,10 @@ function getTasks() {
   if (tasks.length) {
     const trueKey = 1;
     const falseKey = -1;
-    const egualKey = 0;
+    const equalKey = 0;
     tasks = tasks.sort(function(a, b) {
       if (a.isDone === b.isDone) {
-        return egualKey;
+        return equalKey;
       } else if (a.isDone) {
         return trueKey;
       } else {
@@ -119,7 +124,7 @@ function renderTask(task) {
   }
   const a = document.createElement(`a`);
   a.insertAdjacentText(`afterBegin`, `${task.description}`);
-  a.setAttribute(`href`, `#modify/:${task.id}`);
+  a.setAttribute(`href`, `#/modify/:${task.id}`);
 
   btnDelete.addEventListener(`click`, () => localStorage.removeItem(task.id));
   btnDelete.addEventListener(`click`,

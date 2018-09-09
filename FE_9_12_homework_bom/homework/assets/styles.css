@@ -3,7 +3,6 @@ body {
 }
 
 .field {
-    border: 1px solid #000;
     margin: 0 auto;
     padding: 20px;
     width: 50%;
@@ -19,7 +18,9 @@ h1 {
 ul {
     display: flex;
     flex-direction: column;
+    margin: 20px auto 0;
     padding: 0;
+    width: 50%;
 }
 
 .btn-add {
@@ -31,7 +32,10 @@ li {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 100%;
+}
+
+li:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 li a {
@@ -39,6 +43,7 @@ li a {
 }
 
 a {
+    color: #000;
     text-decoration: none;
 }
 
@@ -47,7 +52,6 @@ a {
     background-size: cover;
     border: none;
     padding: 15px;
-
 }
 
 .checked {
@@ -60,5 +64,26 @@ a {
     background-size: cover;
     border: none;
     padding: 15px;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.field > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 0;
+    width: 50%;
+}
+
+.btn-add,
+.btn-cancel,
+.btn-save {
+    background-color: #eae3ea;
+    border-radius: 5px;
+    box-shadow: 1px 1px #aaa5aa;
 }
 
