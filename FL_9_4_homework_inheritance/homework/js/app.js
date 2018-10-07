@@ -1,10 +1,15 @@
 //Task 1
 function assign(obj, defaults, options) {
+  if (typeof obj !== `object` || obj === null) {
+    throw new Error(`Target value is not an object`);
+  }
+
   for (let k in defaults) {
     if (defaults.hasOwnProperty(k)) {
       obj[k] = defaults[k];
     }
   }
+
   for (let k in options) {
     if (options.hasOwnProperty(k)) {
       obj[k] = options[k];
