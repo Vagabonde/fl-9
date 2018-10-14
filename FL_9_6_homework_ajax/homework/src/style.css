@@ -1,0 +1,142 @@
+body, input, button {
+    font-family: Avenir, sans-serif;
+    font-size: 1.2rem;
+}
+
+.form-container {
+    background: linear-gradient(#b7f7f4, #86e6f7);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #aaa5aa;
+    margin: 30px auto;
+    padding: 30px;
+    width: 30%;
+}
+
+.track-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #4299a7;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.track-input:focus {
+    border-color: transparent;
+    background-color: rgba(253, 244, 252, 0.5);
+    outline: none;
+}
+
+.track-btn,
+.track-input,
+.track-input::placeholder,
+.track-text {
+    color: #1b7182;
+}
+
+.track-text {
+    text-align: center;
+}
+
+.track-btn {
+    align-self: flex-end;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid #4299a7;
+    font-size: 1rem;
+    padding: 5px 15px;
+}
+
+.track-btn:hover {
+    background-color: rgba(27, 113, 130, 0.61);
+    color: #e8e3e8;
+    cursor: pointer;
+    transform: translateY(3px);
+    transition: all 0.1s ease-out;
+}
+
+.track-btn:focus {
+    outline: none;
+}
+
+.earth {
+    animation: rotate 3s infinite linear;
+    background: #b7f7f4 url(../../img/galaxy-2150186_640.png);
+    border: 1px solid #6c5282;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: none;
+    height: 131px;
+    margin: 24px auto;
+    width: 130px;
+}
+
+@keyframes rotate {
+    0% {
+        background-position-x: 0
+    }
+    100% {
+        background-position-x: 228px
+    }
+}
+
+.animation-bkg {
+    display: none;
+    height: 130px;
+    margin: 24px auto;
+    overflow: hidden;
+    position: relative;
+    width: 130px;
+}
+
+.animation-obj {
+    animation: move 2s infinite linear;
+    position: absolute;
+    top: 40%;
+    transition: all 0.2s ease-in;
+}
+
+@keyframes move {
+    0% {
+        left: -35%;
+        transform: translateY(0);
+    }
+
+    25% {
+        left: 7%;
+        transform: translateY(-5px);
+    }
+
+    50% {
+        left: 50%;
+        transform: translateY(10px);
+    }
+
+    75% {
+        left: 92%;
+        transform: translateY(-5px);
+    }
+
+    100% {
+        left: 135%;
+        transform: translateY(5px);
+    }
+
+}
+
+.water {
+    background: linear-gradient(transparent, #4baee4);
+    border-bottom: 1px solid #2c72d1;
+    border-radius: 50%;
+}
+
+.land {
+    background: linear-gradient(transparent, #4cb452);
+    border-bottom: 1px solid #1a7d19;
+    border-radius: 50%;
+}
