@@ -38,7 +38,7 @@ function handleClick() {
   $('.btn-view-more').hide();
   $.getJSON('data/media.json', function(data) {
     generateGrid(2, data);
-    $('.pic').on('click', displayModal);
+    $('.pic').off('click', displayModal).on('click', displayModal);
   });
 }
 
