@@ -14,7 +14,6 @@ module.exports.create = function(req, res) {
   fs.writeFile(db, JSON.stringify(jsonContent));
   res.setHeader('Content-Type', 'application/json');
   res.status(201).send(JSON.stringify(data));
-
 };
 
 module.exports.getAll = function(req, res) {
