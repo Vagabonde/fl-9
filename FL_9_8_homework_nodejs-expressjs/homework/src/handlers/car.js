@@ -5,7 +5,7 @@ module.exports.create = function(req, res) {
   const jsonContent = getDb();
   const lastId = jsonContent[jsonContent.length - 1].id;
   const reqData = req.body;
-  if (jsonContent.find((car) => car.id === reqData.id) {
+  if (jsonContent.find((car) => car.id === reqData.id)) {
     res.status(409).send({'message': 'Car already exists.'});
   }
   const data = {id: lastId +1};
