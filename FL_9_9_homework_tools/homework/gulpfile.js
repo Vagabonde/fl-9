@@ -19,9 +19,11 @@ const devDir = 'bin';
 gulp.task('default', function() {
   return runSequence('build', ['devserver', 'watch']);
 });
+
 gulp.task('build', function() {
   return runSequence('clean','set-dev', ['js', 'styles', 'html']);
 });
+
 gulp.task('build-prod', function() {
   return runSequence('clean', 'set-prod', ['js', 'styles', 'html']);
 });
@@ -29,7 +31,6 @@ gulp.task('build-prod', function() {
 gulp.task('set-dev', development.task);
 gulp.task('set-prod', production.task);
 gulp.task('js', ['jsApp', 'jsLib']);
-
 
 gulp.task('jsApp', function() {
   const dir = getDir();
