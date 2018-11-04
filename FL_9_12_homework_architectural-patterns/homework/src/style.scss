@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$turqoise: #26a69a;
+$red: #E57373;
+$gray: #f8f8f8;
+$white: #fff;
+
+$shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+0 3px 1px -2px rgba(0, 0, 0, 0.12),
+0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+.root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search-field {
+  margin: 20px;
+  order: -10;
+  width: 15%;
+}
+
+.list-header,
+.btn-remove {
+  color: $white;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+
+  .list-element:nth-child(even) {
+    background-color: $gray;
+  }
+
+  .list-element:nth-child(odd) {
+    background-color: $white;
+  }
+
+  .list-element,
+  .list-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list-header {
+    background-color: $turqoise;
+    & > * {
+      padding: 15px;
+      text-align: center;
+      width: 13%;
+    }
+  }
+
+  .list-element {
+    & > * {
+      padding: 15px;
+      text-align: center;
+      width: 13%;
+    }
+  }
+
+  .btn-load-more {
+    align-self: center;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    order: 10;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .btn-remove {
+    background-color: $red;
+    box-shadow: $shadow;
+    margin-right: 10px;
+    padding: 8px;
+  }
+
+  .email {
+    width: 22%;
+  }
+
+}
